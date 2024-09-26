@@ -1,0 +1,26 @@
+[
+    {
+        "organizationName": "KET",
+        "numberOfEmployees": 10,
+        "fullTimeTrainers": 2,
+        "partTimeTrainers": 8
+    },
+    {
+        "organizationName": "EI",
+        "numberOfEmployees": 12,
+        "fullTimeTrainers": 6,
+        "partTimeTrainers": 6
+    },
+    {
+        "organizationName": "OB",
+        "numberOfEmployees": 7,
+        "fullTimeTrainers": 4,
+        "partTimeTrainers": 3
+    },
+    {
+        "organizationName": "DKS",
+        "numberOfEmployees": 5,
+        "fullTimeTrainers": 1,
+        "partTimeTrainers": 4
+    }
+]

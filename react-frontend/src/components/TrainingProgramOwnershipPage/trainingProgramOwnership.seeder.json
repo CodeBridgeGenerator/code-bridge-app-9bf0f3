@@ -1,0 +1,22 @@
+[
+    {
+        "organizationName": "KET",
+        "organizationType": "Bhd",
+        "ownershipType": "Sole proprietorship"
+    },
+    {
+        "organizationName": "EI",
+        "organizationType": "Sdn Bhd",
+        "ownershipType": "Sole proprietorship"
+    },
+    {
+        "organizationName": "OB",
+        "organizationType": "Sdn Bhd",
+        "ownershipType": "Sole proprietorship"
+    },
+    {
+        "organizationName": "DKS",
+        "organizationType": "Bhd",
+        "ownershipType": "Partnership"
+    }
+]

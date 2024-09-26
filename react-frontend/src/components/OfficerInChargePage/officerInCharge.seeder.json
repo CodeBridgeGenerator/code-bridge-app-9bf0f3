@@ -1,0 +1,34 @@
+[
+    {
+        "officerName": "Ali",
+        "designation": "Programmer",
+        "hp": 6012345678,
+        "icPassportNumber": "780930-12-1111",
+        "email": "ali@test.com",
+        "organizationName": "KET"
+    },
+    {
+        "officerName": "Abu",
+        "designation": "SA",
+        "hp": 6012345678,
+        "icPassportNumber": "890125-12-2222",
+        "email": "abu@test.com",
+        "organizationName": "EI"
+    },
+    {
+        "officerName": "Siti",
+        "designation": "Tester",
+        "hp": 6012345678,
+        "icPassportNumber": "951201-12-3333",
+        "email": "siti@test.com",
+        "organizationName": "OB"
+    },
+    {
+        "officerName": "Didi",
+        "designation": "PM",
+        "hp": 6012345678,
+        "icPassportNumber": "000314-12-4444",
+        "email": "didi@test.com",
+        "organizationName": "DKS"
+    }
+]

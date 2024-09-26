@@ -1,0 +1,26 @@
+[
+    {
+        "trainerIcPassportNumber": "780930-12-1111",
+        "organizationName": "KET",
+        "employmentType": "Full time",
+        "nationality": "Malaysian"
+    },
+    {
+        "trainerIcPassportNumber": "890125-12-2222",
+        "organizationName": "EI",
+        "employmentType": "Part time",
+        "nationality": "Malaysian"
+    },
+    {
+        "trainerIcPassportNumber": "951201-12-3333",
+        "organizationName": "OB",
+        "employmentType": "Full time",
+        "nationality": "Malaysian"
+    },
+    {
+        "trainerIcPassportNumber": "000314-12-4444",
+        "organizationName": "DKS",
+        "employmentType": "Part time",
+        "nationality": "Malaysian"
+    }
+]

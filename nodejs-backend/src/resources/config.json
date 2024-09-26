@@ -1,0 +1,1304 @@
+{
+  "projectName": "code-bridge-app",
+  "description": "Test capabilities of Code Bridge and it's functions",
+  "auth": "jwt",
+  "database": {
+    "pathToLogo": {
+      "s": "/assets/applications_logos/mongodb-s.png",
+      "l": "/assets/applications_logos/mongodb.png"
+    },
+    "appName": "mongodb-database",
+    "disabled": false,
+    "type": "database",
+    "name": "mongodb",
+    "label": "MongoDB"
+  },
+  "stack": [
+    {
+      "appName": "nodejs-backend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/nodejs-s.png",
+        "l": "/assets/applications_logos/nodejs.png"
+      },
+      "type": "backend",
+      "name": "nodejs",
+      "label": "Node.js Express Feathers.js"
+    },
+    {
+      "appName": "react-frontend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/react-s.png",
+        "l": "/assets/applications_logos/react.png"
+      },
+      "type": "frontend",
+      "name": "react",
+      "label": "React JavaScript"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "users",
+      "databaseName": "users",
+      "displayName": "Users",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [],
+      "schemaList": [
+        {
+          "fieldName": "name",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Name",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10a9"
+          },
+          "min": 2,
+          "max": 100,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": true,
+          "lowercase": true,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10aa"
+          },
+          "min": 5,
+          "max": 150,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "password",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": true,
+          "editable": false,
+          "sortable": false,
+          "required": true,
+          "component": "p",
+          "label": "Password",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10ab"
+          },
+          "min": 5,
+          "max": 300,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": true,
+      "seeder": [],
+      "skip": true,
+      "downloadable": true,
+      "uploadable": false,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "businessInformation",
+      "databaseName": "business_information",
+      "displayName": "Business Information",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10ad"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "numberOfEmployees",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Number of Employees",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10ae"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "fullTimeTrainers",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Full Time Trainers",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10af"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "partTimeTrainers",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Part-Time Trainers",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10b0"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "organizationName": "KET",
+          "numberOfEmployees": 10,
+          "fullTimeTrainers": 2,
+          "partTimeTrainers": 8
+        },
+        {
+          "organizationName": "EI",
+          "numberOfEmployees": 12,
+          "fullTimeTrainers": 6,
+          "partTimeTrainers": 6
+        },
+        {
+          "organizationName": "OB",
+          "numberOfEmployees": 7,
+          "fullTimeTrainers": 4,
+          "partTimeTrainers": 3
+        },
+        {
+          "organizationName": "DKS",
+          "numberOfEmployees": 5,
+          "fullTimeTrainers": 1,
+          "partTimeTrainers": 4
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "trainingProvidersDescription",
+      "databaseName": "training_providers_description",
+      "displayName": "Training Providers Description",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10b2"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationAddress",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Address",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10b3"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "organizationName": "KET",
+          "organizationAddress": "ket 88000 sabah kk"
+        },
+        {
+          "organizationName": "EI",
+          "organizationAddress": "ei 88000 sabah kk"
+        },
+        {
+          "organizationName": "OB",
+          "organizationAddress": "ob 88000 sabah kk"
+        },
+        {
+          "organizationName": "DKS",
+          "organizationAddress": "dks 88000 sabah kk"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "trainerDetails",
+      "databaseName": "trainer_details",
+      "displayName": "Trainer Details",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "trainerIcPassportNumber",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Trainer IC/Passport Number",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10b5"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10b6"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "employmentType",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Employment Type",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10b7"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "nationality",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Nationality",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10b8"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "trainerIcPassportNumber": "780930-12-1111",
+          "organizationName": "KET",
+          "employmentType": "Full time",
+          "nationality": "Malaysian"
+        },
+        {
+          "trainerIcPassportNumber": "890125-12-2222",
+          "organizationName": "EI",
+          "employmentType": "Part time",
+          "nationality": "Malaysian"
+        },
+        {
+          "trainerIcPassportNumber": "951201-12-3333",
+          "organizationName": "OB",
+          "employmentType": "Full time",
+          "nationality": "Malaysian"
+        },
+        {
+          "trainerIcPassportNumber": "000314-12-4444",
+          "organizationName": "DKS",
+          "employmentType": "Part time",
+          "nationality": "Malaysian"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "officerInCharge",
+      "databaseName": "officer_in_charge",
+      "displayName": "Officer In Charge",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "officerName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Officer Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10ba"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "designation",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Designation",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10bb"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "hp",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Hp.",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10bc"
+          },
+          "min": 0,
+          "max": 6012345678,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "icPassportNumber",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "IC / Passport Number",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10bd"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10be"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10bf"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "officerName": "Ali",
+          "designation": "Programmer",
+          "hp": 6012345678,
+          "icPassportNumber": "780930-12-1111",
+          "email": "ali@test.com",
+          "organizationName": "KET"
+        },
+        {
+          "officerName": "Abu",
+          "designation": "SA",
+          "hp": 6012345678,
+          "icPassportNumber": "890125-12-2222",
+          "email": "abu@test.com",
+          "organizationName": "EI"
+        },
+        {
+          "officerName": "Siti",
+          "designation": "Tester",
+          "hp": 6012345678,
+          "icPassportNumber": "951201-12-3333",
+          "email": "siti@test.com",
+          "organizationName": "OB"
+        },
+        {
+          "officerName": "Didi",
+          "designation": "PM",
+          "hp": 6012345678,
+          "icPassportNumber": "000314-12-4444",
+          "email": "didi@test.com",
+          "organizationName": "DKS"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "trainingProgramOwnership",
+      "databaseName": "training_program_ownership",
+      "displayName": "Training Program Ownership",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10c1"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationType",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Type",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10c2"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "ownershipType",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Ownership Type",
+          "faker": {
+            "skip": false,
+            "_id": "66f4dcb0743a898bf29c10c3"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "organizationName": "KET",
+          "organizationType": "Bhd",
+          "ownershipType": "Sole proprietorship"
+        },
+        {
+          "organizationName": "EI",
+          "organizationType": "Sdn Bhd",
+          "ownershipType": "Sole proprietorship"
+        },
+        {
+          "organizationName": "OB",
+          "organizationType": "Sdn Bhd",
+          "ownershipType": "Sole proprietorship"
+        },
+        {
+          "organizationName": "DKS",
+          "organizationType": "Bhd",
+          "ownershipType": "Partnership"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    }
+  ]
+}
